@@ -2,196 +2,276 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Kulkarni General & Xerox</title>
 
 <style>
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #eaf4ff, #f7fbff);
-  color: #17233b;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eaf4ff, #f5faff);
+    color: #17323b;
 }
 
 .card {
-  width: min(100%, 480px);
-  background: #ffffff;
-  border-radius: 28px;
-  padding: 28px 22px;
-  box-shadow: 0 18px 55px rgba(15, 60, 110, 0.15);
-  text-align: center;
+    width: min(92%, 460px);
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 35px 28px;
+    text-align: center;
+    box-shadow: 0 18px 55px rgba(15, 60, 110, 0.18);
 }
 
 .logo {
-  width: 76px;
-  height: 76px;
-  border-radius: 20px;
-  margin: 0 auto 14px;
-  background: #0b63ce;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 29px;
-  font-weight: 800;
+    width: 138px;
+    height: 138px;
+    border-radius: 28px;
+    object-fit: cover;
+    margin: 0 auto 22px;
+    display: block;
 }
 
 h1 {
-  font-size: 27px;
-  margin: 5px 0 7px;
-  color: #0b3f83;
+    margin: 0;
+    color: #174f8c;
+    font-size: 30px;
+    line-height: 1.2;
 }
 
 .subtitle {
-  margin: 0 0 22px;
-  color: #68758a;
-  font-size: 17px;
+    margin: 14px 0 28px;
+    color: #68798a;
+    font-size: 20px;
 }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 16px;
-  margin: 12px 0;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
+button {
+    width: 100%;
+    border: 0;
+    border-radius: 22px;
+    padding: 19px 15px;
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
 
-.pay {
-  background: #0866d6;
+.pay-btn {
+    background: #0878d1;
 }
 
-.whatsapp {
-  background: #1daa59;
+.whatsapp-btn {
+    background: #20b15a;
 }
 
-.qrbox {
-  margin: 24px auto 15px;
-  padding: 18px;
-  border-radius: 20px;
-  background: #f3f7fc;
+.upi-box {
+    margin-top: 25px;
+    padding: 22px 15px;
+    background: #f3f7fc;
+    border-radius: 24px;
 }
 
-.qr-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0b3f83;
-  margin-bottom: 12px;
+.label {
+    color: #68798a;
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 
-.qrbox img {
-  width: 100%;
-  max-width: 310px;
-  height: auto;
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
+.upi-id {
+    color: #174f8c;
+    font-size: 21px;
+    font-weight: bold;
+    word-break: break-all;
 }
 
-.info {
-  margin-top: 15px;
-  padding: 15px;
-  border-radius: 15px;
-  background: #f3f7fc;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #53627a;
+.phone {
+    margin-top: 18px;
+    color: #53677a;
+    font-size: 18px;
 }
 
-.upi {
-  font-weight: 700;
-  color: #0b3f83;
-  word-break: break-all;
+.qr-section {
+    margin-top: 25px;
+}
+
+.qr-section img {
+    width: 180px;
+    max-width: 80%;
+    border-radius: 15px;
+}
+
+.qr-text {
+    margin-top: 12px;
+    color: #8995a8;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .note {
-  font-size: 12px;
-  color: #8995a8;
-  margin-top: 15px;
+    margin-top: 18px;
+    color: #8995a8;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<main class="card">
+<div class="card">
 
-  <div class="logo">KGX</div>
-
-  <h1>Kulkarni General &amp; Xerox</h1>
-
-  <p class="subtitle">
-    Choose an option below
-  </p>
-
-  <!-- PAY NOW -->
-  <a
-    class="btn pay"
-    href="upi://pay?pa=paytmqr6ewf1o@ptys&amp;pn=Paytm"
-  >
-    💳 &nbsp; Pay Now via UPI
-  </a>
-
-  <!-- WHATSAPP -->
-  <a
-    class="btn whatsapp"
-    href="https://wa.me/919881817399"
-    target="_blank"
-    rel="noopener"
-  >
-    💬 &nbsp; Chat on WhatsApp
-  </a>
-
-  <!-- ORIGINAL QR -->
-  <div class="qrbox">
-
-    <div class="qr-title">
-      Scan QR to Pay
+    <!-- Logo -->
+    <div>
+        <img
+            src="paytm-qr.png"
+            alt="Kulkarni General & Xerox"
+            class="logo">
     </div>
 
-    <img
-      src="paytm-qr.png"
-      alt="Paytm UPI Payment QR"
-    >
+    <h1>Kulkarni General & Xerox</h1>
 
-  </div>
-
-  <!-- DETAILS -->
-  <div class="info">
-
-    <div>UPI ID</div>
-
-    <div class="upi">
-      paytmqr6ewf1o@ptys
+    <div class="subtitle">
+        Choose an option below
     </div>
 
-    <div style="margin-top:7px;">
-      WhatsApp:
-      <b>+91 9881817399</b>
+    <!-- PAY NOW -->
+    <button
+        class="pay-btn"
+        onclick="payNow()">
+        💳 Pay Now via UPI
+    </button>
+
+    <!-- WHATSAPP -->
+    <button
+        class="whatsapp-btn"
+        onclick="openWhatsApp()">
+        💬 Chat on WhatsApp
+    </button>
+
+    <!-- UPI INFORMATION -->
+    <div class="upi-box">
+
+        <div class="label">
+            UPI ID
+        </div>
+
+        <div class="upi-id">
+            paytmqr6ewf1o@ptys
+        </div>
+
+        <div class="phone">
+            WhatsApp: <b>+91 9881817399</b>
+        </div>
+
     </div>
 
-  </div>
+    <!-- QR -->
+    <div class="qr-section">
 
-  <div class="note">
-    Pay securely using any UPI app.
-  </div>
+        <img
+            src="paytm-qr.png"
+            alt="UPI QR Code">
 
-</main>
+        <div class="qr-text">
+            Scan the QR code to make a payment.
+        </div>
+
+    </div>
+
+    <div class="note">
+        Secure UPI payment
+    </div>
+
+</div>
+
+
+<script>
+
+function payNow() {
+
+    let amount = prompt(
+        "Enter payment amount in ₹"
+    );
+
+    if (amount === null) {
+        return;
+    }
+
+    amount = amount.trim();
+
+    /*
+     * Allow numbers such as:
+     * 10
+     * 50
+     * 100
+     * 125.50
+     */
+
+    if (
+        amount === "" ||
+        isNaN(amount) ||
+        Number(amount) <= 0
+    ) {
+        alert(
+            "Please enter a valid amount."
+        );
+        return;
+    }
+
+    amount = Number(amount).toFixed(2);
+
+    const upiId =
+        "paytmqr6ewf1o@ptys";
+
+    const merchantName =
+        "Kulkarni General & Xerox";
+
+    const upiUrl =
+        "upi://pay" +
+        "?pa=" + encodeURIComponent(upiId) +
+        "&pn=" + encodeURIComponent(merchantName) +
+        "&am=" + amount +
+        "&cu=INR";
+
+    /*
+     * Open UPI payment application
+     */
+    window.location.href = upiUrl;
+}
+
+
+function openWhatsApp() {
+
+    const phone =
+        "919881817399";
+
+    const message =
+        "Hello Kulkarni General & Xerox";
+
+    const url =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(
+        url,
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 </html>
